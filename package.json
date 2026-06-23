@@ -1,0 +1,76 @@
+{
+  "name": "ai-code-explainer",
+  "displayName": "AI Code Explainer",
+  "description": "AI-powered code explanation using Gemini",
+  "version": "0.0.1",
+  "engines": { "vscode": "^1.80.0" },
+  "categories": ["Other"],
+  "activationEvents": [],
+  "main": "./out/extension.js",
+  "contributes": {
+    "commands": [
+      {
+        "command": "ai-code-explainer.explain",
+        "title": "AI: Explain Selected Code"
+      },
+      {
+        "command": "ai-code-explainer.review",
+        "title": "AI: Review Selected Code"
+      },
+      {
+        "command": "ai-code-explainer.document",
+        "title": "AI: Generate Documentation"
+      }
+    ],
+    "keybindings": [
+      {
+        "command": "ai-code-explainer.explain",
+        "key": "ctrl+shift+e",
+        "when": "editorTextFocus"
+      },
+      {
+        "command": "ai-code-explainer.review",
+        "key": "ctrl+shift+r",
+        "when": "editorTextFocus"
+      },
+      {
+        "command": "ai-code-explainer.document",
+        "key": "ctrl+shift+d",
+        "when": "editorTextFocus"
+      }
+    ],
+    "menus": {
+      "editor/context": [
+        {
+          "command": "ai-code-explainer.explain",
+          "when": "editorHasSelection",
+          "group": "ai@1"
+        },
+        {
+          "command": "ai-code-explainer.review",
+          "when": "editorHasSelection",
+          "group": "ai@2"
+        },
+        {
+          "command": "ai-code-explainer.document",
+          "when": "editorHasSelection",
+          "group": "ai@3"
+        }
+      ]
+    }
+  },
+  "scripts": {
+    "vscode:prepublish": "npm run compile",
+    "compile": "tsc -p ./",
+    "watch": "tsc -watch -p ./"
+  },
+  "devDependencies": {
+    "@types/vscode": "^1.80.0",
+    "@types/node": "^16.0.0",
+    "typescript": "^5.0.0"
+  },
+  "dependencies": {
+    "@google/generative-ai": "^0.15.0",
+    "dotenv": "^16.0.0"
+  }
+}
