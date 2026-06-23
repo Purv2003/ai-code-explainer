@@ -1,71 +1,40 @@
-# AI-Code-Explainer README
+# AI Code Explainer — VS Code Extension
 
-This is the README for your extension "AI-Code-Explainer". After writing up a brief description, we recommend including the following sections.
+A VS Code extension that explains, reviews, and documents 
+code using Google Gemini AI — directly in your editor.
 
 ## Features
+- **Ctrl+Shift+E** — Explain selected code in a side panel
+- **Ctrl+Shift+R** — Get actionable code review with 
+  improvement suggestions
+- **Ctrl+Shift+D** — Auto-generate documentation/docstrings
+- Right-click context menu integration for all 3 commands
 
-Describe specific features of your extension including screenshots of your extension in action. Image paths are relative to this README file.
+## Tech Stack
+- TypeScript (VS Code Extension API)
+- Google Gemini API (gemini-2.5-flash-lite)
+- VS Code Webview API for the results panel
 
-For example if there is an image subfolder under your extension project workspace:
+## How It Works
+1. Select any code in the editor
+2. Press Ctrl+Shift+E (or right-click → AI: Explain)
+3. The AI explanation appears in a panel on the right
+   without leaving your editor
 
-\!\[feature X\]\(images/feature-x.png\)
+## Setup
+1. Clone the repo
+2. Run `npm install`
+3. Get a free Gemini API key at aistudio.google.com
+4. Create `.env` file: `GEMINI_API_KEY=your_key_here`
+5. Press F5 to launch in development mode
 
-> Tip: Many popular extensions utilize animations. This is an excellent way to show off your extension! We recommend short, focused animations that are easy to follow.
+## Screenshots
 
-## Requirements
 
-If you have any requirements or dependencies, add a section describing those and how to install and configure them.
 
-## Extension Settings
-
-Include if your extension adds any VS Code settings through the `contributes.configuration` extension point.
-
-For example:
-
-This extension contributes the following settings:
-
-* `myExtension.enable`: Enable/disable this extension.
-* `myExtension.thing`: Set to `blah` to do something.
-
-## Known Issues
-
-Calling out known issues can help limit users opening duplicate issues against your extension.
-
-## Release Notes
-
-Users appreciate release notes as you update your extension.
-
-### 1.0.0
-
-Initial release of ...
-
-### 1.0.1
-
-Fixed issue #.
-
-### 1.1.0
-
-Added features X, Y, and Z.
-
----
-
-## Following extension guidelines
-
-Ensure that you've read through the extensions guidelines and follow the best practices for creating your extension.
-
-* [Extension Guidelines](https://code.visualstudio.com/api/references/extension-guidelines)
-
-## Working with Markdown
-
-You can author your README using Visual Studio Code. Here are some useful editor keyboard shortcuts:
-
-* Split the editor (`Cmd+\` on macOS or `Ctrl+\` on Windows and Linux).
-* Toggle preview (`Shift+Cmd+V` on macOS or `Shift+Ctrl+V` on Windows and Linux).
-* Press `Ctrl+Space` (Windows, Linux, macOS) to see a list of Markdown snippets.
-
-## For more information
-
-* [Visual Studio Code's Markdown Support](http://code.visualstudio.com/docs/languages/markdown)
-* [Markdown Syntax Reference](https://help.github.com/articles/markdown-basics/)
-
-**Enjoy!**
+## Why I Built This
+Built as a portfolio project to understand how AI coding
+assistants work under the hood — specifically how VS Code
+extensions access editor context and render AI responses
+in Webview panels. Directly relevant to how tools like
+Sypha AI, GitHub Copilot, and Cursor are built.
