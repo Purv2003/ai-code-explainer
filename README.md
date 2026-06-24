@@ -29,8 +29,17 @@ code using Google Gemini AI — directly in your editor.
 5. Press F5 to launch in development mode
 
 ## Screenshots
+### Code Review
 <a href="images/image-1.png">
   <img src="images/image-1.png" alt="Demo" width="800">
+</a>
+### Code Explanation
+<a href="images/image-2.png">
+  <img src="images/image-2.png" alt="Demo" width="800">
+</a>
+### Code Documentation
+<a href="images/image-3.png">
+  <img src="images/image-3.png" alt="Demo" width="800">
 </a>
 
 

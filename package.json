@@ -3,8 +3,12 @@
   "displayName": "AI Code Explainer",
   "description": "AI-powered code explanation using Gemini",
   "version": "0.0.1",
-  "engines": { "vscode": "^1.80.0" },
-  "categories": ["Other"],
+  "engines": {
+    "vscode": "^1.80.0"
+  },
+  "categories": [
+    "Other"
+  ],
   "activationEvents": [],
   "main": "./out/extension.js",
   "contributes": {
@@ -65,12 +69,13 @@
     "watch": "tsc -watch -p ./"
   },
   "devDependencies": {
-    "@types/vscode": "^1.80.0",
     "@types/node": "^16.0.0",
+    "@types/vscode": "^1.80.0",
     "typescript": "^5.0.0"
   },
   "dependencies": {
     "@google/generative-ai": "^0.15.0",
-    "dotenv": "^16.0.0"
+    "dotenv": "^16.0.0",
+    "groq-sdk": "^1.3.0"
   }
 }
